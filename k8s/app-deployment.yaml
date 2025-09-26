@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: springboot-app
-        image: PLACEHOLDER  # Jenkins pipeline will replace this
+        image: ${DOCKER_HUB_REPO}:${IMAGE_TAG}  # Jenkins will replace these env variables
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -23,3 +23,5 @@ spec:
           value: "mongo"
         - name: SPRING_DATA_MONGODB_PORT
           value: "27017"
+      imagePullSecrets:
+      - name: dockerhub-creds   # Ensure this secret exists in your cluster
