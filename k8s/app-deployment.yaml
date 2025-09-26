@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: springboot-app
-        image: preetz1303/springboot-mongo:latest
+        image: PLACEHOLDER  # Jenkins pipeline will replace this
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
