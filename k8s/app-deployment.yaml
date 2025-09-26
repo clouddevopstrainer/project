@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: springboot-app
-        image: ${DOCKER_HUB_REPO}:${IMAGE_TAG}  # Jenkins will replace these env variables
+        image: $DOCKERHUB_USER/springboot-mongo:${IMAGE_TAG}  # Jenkins will replace these env variables
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
