@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: springboot-app
-        image: <DOCKERHUB_USER>/springboot-mongo:latest
+        image: preetz1303/springboot-mongo:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
